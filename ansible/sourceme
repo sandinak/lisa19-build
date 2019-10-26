@@ -1,0 +1,5 @@
+export GIT_NAME=$(basename ${PWD})
+echo "activating $GIT_NAME"
+. venv/bin/activate
+COLOR_PROMPT=${GIT_NAME}
+export PATH="${PATH}:{$PWD}/bin"
