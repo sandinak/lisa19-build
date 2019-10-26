@@ -1,0 +1,18 @@
+---
+# common tasks main.yml
+- name: add epel
+  yum:
+    name:
+      - epel-release
+    state: latest
+
+- name: tasks on all servers
+  yum:
+    name:
+      - joe
+      - tmux
+      - htop
+      - atop
+      - sysstat
+      - etckeeper
+    state: latest
