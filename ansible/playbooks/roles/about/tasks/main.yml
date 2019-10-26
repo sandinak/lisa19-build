@@ -1,0 +1,16 @@
+---
+- name: Repository URL
+  debug:
+    msg: '{{ ansible_repository }}'
+
+- name: Host name
+  debug:
+    msg: '{{ ansible_fqdn }}'
+
+- name: Host description
+  debug:
+    msg: '{{ host_description }}'
+
+- name: Host location
+  debug:
+    msg: '{{ host_location }}'

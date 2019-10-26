@@ -1,0 +1,5 @@
+---
+- name: about.yml | Show informations about this Ansible repository
+  hosts: localhost
+  roles:
+    - 'about'

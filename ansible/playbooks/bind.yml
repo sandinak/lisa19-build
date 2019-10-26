@@ -1,0 +1,58 @@
+# Ansible role for DNS server
+---
+
+- hosts: dns
+  become: true
+  vars:
+    bind_zone_dir: /var/local/named-zones
+    bind_zone_file_mode: '0660'
+    bind_allow_query:
+      - any
+    bind_listen_ipv4:
+      - any
+    bind_listen_ipv6:
+      - any
+    bind_forwarders:
+      - '8.8.8.8'
+      - '1.1.1.1'
+    bind_recursion: true
+    bind_query_log: 'data/query.log'
+    bind_check_names: 'master ignore'
+    bind_zone_master_server_ip: 172.18.12.30
+    bind_zone_minimum_ttl: "2D"
+    bind_zone_ttl: "2W"
+    bind_zone_time_to_refresh: "2D"
+    bind_zone_time_to_retry: "2H"
+    bind_zone_time_to_expire: "2W"
+    bind_zone_domains:
+      - name: 'guest.lisa19.org'
+        networks:
+          - '10.0'
+        name_servers:
+          - ns1.services.lisa19.org.
+          - ns2.services.lisa19.org.
+      - name: 'services.lisa19.org'
+        networks:
+          - '172.18.12'
+        name_servers:
+          - ns1.services.lisa19.org.
+          - ns2.services.lisa19.org.
+        hosts:
+          - name: ns1
+            ip: 172.18.12.30
+          - name: ns2
+            ip: 172.18.12.30
+      - name: 'classsvc.lisa19.org'
+        networks:
+          - '10.1'
+        name_servers:
+          - ns1.services.lisa19.org.
+          - ns2.services.lisa19.org.
+      - name: 'admin.lisa19.org'
+        networks:
+          - '172.16'
+        name_servers:
+          - ns1.services.lisa19.org.
+          - ns2.services.lisa19.org.
+  roles:
+    - bind
