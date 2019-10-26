@@ -16,3 +16,12 @@
       - sysstat
       - etckeeper
     state: latest
+
+- name: fix /etc/tmux.conf
+  template:
+    src: "tmux.conf.j2"
+    dest: /etc/tmux.conf
+    mode: "0644"
+    backup: yes
+  become: True
+
