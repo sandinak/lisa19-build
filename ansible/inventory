@@ -1,3 +1,8 @@
 [dns]
 172.18.12.10
 172.18.12.20
+
+[dhcp-srv]
+dhcp0.srv.lisa19.org
+dhcp1.src.lisa19.org
+
