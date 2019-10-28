@@ -52,12 +52,16 @@
             ip: 172.18.12.20
           - name: tick
             ip: 172.18.12.250
-          - name: logging
+          - name: logs
             ip: 172.18.12.251
           - name: aruba-master
             ip: 10.1.0.248
           - name: firewall
             ip: 172.18.12.1
+          - name: dhcp0
+            ip: 172.18.12.3
+          - name: dhcp1
+            ip: 172.18.12.4
       - name: 'classsvc.lisa19.org'
         networks:
           - '10.1'
