@@ -3,5 +3,8 @@ ns1 ansible_host=172.18.12.10
 ns2 ansible_host=172.18.12.20
 
 [dhcp-srv]
-dhcp0.srv.lisa19.org
-dhcp1.src.lisa19.org
+dhcp0 ansible_host=172.18.12.3
+dhcp1 ansible_host=172.18.12.4
+
+[testing]
+nstest ansible_host=172.18.12.245
