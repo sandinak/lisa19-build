@@ -47,9 +47,15 @@
           - ns2.services.lisa19.org.
         hosts:
           - name: ns1
-            ip: 172.18.12.30
+            ip: 172.18.12.10
           - name: ns2
-            ip: 172.18.12.30
+            ip: 172.18.12.20
+          - name: tick
+            ip: 172.18.12.250
+          - name: logging
+            ip: 172.18.12.251
+          - name: aruba-master
+            ip: 10.1.0.248
       - name: 'classsvc.lisa19.org'
         networks:
           - '10.1'
