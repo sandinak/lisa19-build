@@ -56,6 +56,8 @@
             ip: 172.18.12.251
           - name: aruba-master
             ip: 10.1.0.248
+          - name: firewall
+            ip: 172.18.12.1
       - name: 'classsvc.lisa19.org'
         networks:
           - '10.1'
