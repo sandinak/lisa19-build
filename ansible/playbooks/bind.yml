@@ -13,8 +13,7 @@
     bind_listen_ipv6:
       - any
     bind_forwarders:
-      - '8.8.8.8'
-      - '1.1.1.1'
+      - '127.0.0.1 port 5353'
     bind_recursion: true
     bind_query_log: 'data/query.log'
     bind_check_names: 'master ignore'
