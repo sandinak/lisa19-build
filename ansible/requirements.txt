@@ -1,5 +1,5 @@
 ansible==2.8.8
-PyYAML==5.1.2
+PyYAML==5.4
 jinja2>=2.9.6
 json2yaml>=1.1.1
 netaddr==0.7.19
