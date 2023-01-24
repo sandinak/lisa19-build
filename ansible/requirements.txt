@@ -1,4 +1,4 @@
-ansible==2.8.8
+ansible==7.0.0
 PyYAML==5.1.2
 jinja2>=2.9.6
 json2yaml>=1.1.1
